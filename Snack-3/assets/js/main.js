@@ -20,17 +20,21 @@ const nomi = [
     'Francesca',
     'Chiara',
     'Fabio'
-]
+] 
 
 console.log(nomi)
 
 console.log(myFunction(nomi, 3, 8))
 
 /********FUNCTION*******/
+// function myFunction(array, min, max){
+//     let newArray = []
+//     for(let i = min; i <= max; i++){
+//         newArray.push(array[i])
+//     }
+//     return(newArray)
+// }
+
 function myFunction(array, min, max){
-    let newArray = []
-    for(let i = min; i <= max; i++){
-        newArray.push(array[i])
-    }
-    return(newArray)
+    return array.filter((el, index) => index > min & index < max)
 }
